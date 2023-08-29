@@ -8,11 +8,12 @@ import Navbar from './components/Navbar'
 
 function App() {
 
-
+  
   return (
     <>
-    
     <Navbar />
+    <img src='./src/assets/hero-img2.png' className='hero-img' />
+    
     </>
   )
 }
