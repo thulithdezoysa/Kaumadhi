@@ -1,8 +1,6 @@
 
-
-
 .navbar{
-    background: rgba(138, 138, 138, 0.20);
+    background: rgba(138, 138, 138, 0.507);
     box-shadow: 0px 4px 25px 3px rgba(0, 0, 0, 0.16);
     backdrop-filter: blur(2px);
     padding: 2em 4em;
@@ -12,6 +10,12 @@
     position: fixed;
     top: 0;
     width: 100vw;
+    text-shadow:1px 1px 1px black;
+    color: white;
+    
+    
+
+    
 }
 
 .navbar__logo{
@@ -20,12 +24,49 @@
 }
 
 
-
+.navbar__icons{
+    white-space: nowrap;
+    font-size: var(--fs-h3);
+}
 .navbar__icon-seperator{
-    border-right: 1px solid black;
+    border-right: 3px solid white;
     margin-right: 1em;
     padding-right: 1em;
 }
+input{
+    padding: 1em 5em 1em 2em;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.068);
+    color: var(--color-white);
+    flex-grow: 1;
+    width: 100%;
+    font-size: inherit;
+    
+    
+}
+input::placeholder{
+    color: var(--color-white);
+}
+.navbar__search-bar{
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.363);
+    border-right: none;
+    width: 30%;
+    margin: 0 3em;
+    
+}
+
+.navbar__search-icon{
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    padding: 1.05em 1.44em;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.226);
+    color: var(--color-white);
+    top: -1px;
+    right: 0;
+    font-size: inherit;
+}
+
 
 ul{
     list-style: none;
@@ -36,11 +77,19 @@ ul{
 
 li{
     padding:.5em 1em;
-
+    white-space: nowrap;
+    font-weight: var(--fw-bold);
 }
 
 li:hover{
+    
     color: var(--color-white);
     background-color: rgba(0, 0, 0, 0.79);
-
+    
 }
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+

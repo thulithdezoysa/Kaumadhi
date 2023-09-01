@@ -60,3 +60,7 @@ body {
     /* min-height: 400px; */
 
 }
+
+.bold{
+    font-weight: var(--fw-bold);
+}

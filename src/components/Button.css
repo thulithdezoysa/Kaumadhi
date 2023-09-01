@@ -1,0 +1,22 @@
+button{
+    border: none;
+    padding: 1em 2em; 
+    font-size: var(--fs-body);
+    font-weight: var(--fw-reg);
+    font-family: var(--ff-primary);
+    cursor: pointer;
+    box-shadow: var(--bs);
+    transition: transform 550ms ease-in-out;
+}
+.primary-btn{
+    background:  linear-gradient(90deg, rgba(242, 248, 210, 0.80) -28.38%, rgba(255, 206, 250, 0.80) 156.43%);
+    border-radius: 50px;
+}
+.secondary-btn{
+    border-radius: 5px;
+    background-color: rgba(236, 229, 199, 1);
+}
+
+button:hover{
+    transform: scale(1.05);
+}
