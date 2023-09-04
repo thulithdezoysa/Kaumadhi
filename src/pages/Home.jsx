@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import './Home.css'
-import Collections from "./Collections";
+
 
 export default function Home (){
     return(

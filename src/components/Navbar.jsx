@@ -5,13 +5,6 @@ import { faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-i
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { Link } from 'react-router-dom'
 
-
-
-
-
-
-
-
 export default function Navbar () {
 
     return (
@@ -33,8 +26,10 @@ export default function Navbar () {
                 <li>
                     <Link to="/collections">Collections</Link>
                 </li>
-                <li>About</li>
-                <li>Contact us</li>
+                <li>
+                    <Link to="/about-us">About us</Link>
+                </li>
+                
             </ul>
 
         </nav>

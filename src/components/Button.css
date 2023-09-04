@@ -2,7 +2,7 @@ button{
     border: none;
     padding: 1em 2em; 
     font-size: var(--fs-body);
-    font-weight: var(--fw-reg);
+    font-weight: var(--fw-bold);
     font-family: var(--ff-primary);
     cursor: pointer;
     box-shadow: var(--bs);
