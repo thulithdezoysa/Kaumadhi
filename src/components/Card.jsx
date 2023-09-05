@@ -18,12 +18,15 @@ export default function Card (){
                 <div className='card'>
                     <img src={item.img} className='card__img' />
                     <h2>{item.name}</h2>
-                    <div className='text-wrapper'>
+                    <div className='card__size-wrapper'>
                         <p>Available in: <span className='card__size'>{item.size}</span> </p> 
                         <FontAwesomeIcon icon={faHeart} className='card__heart-icon'/>
                     </div>
-                    <p>Price:</p>
-                    <h3>Rs {item.price}</h3>
+                    <div className='card__price-wrapper'>
+                        <p>Price: </p>
+                        <h3>Rs {item.price}</h3>
+                    </div>
+                    
 
                     <Button btnType="primary-btn" text="Add to cart"/>
                     

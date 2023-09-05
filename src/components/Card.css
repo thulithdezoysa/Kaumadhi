@@ -2,9 +2,12 @@
     display: grid;
 
     grid-gap: 2em;
-    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     border: 1px solid red;
     padding: 1em;
+    margin-left: 500px;
+    margin-right: 0;
+    
     
     
 }
@@ -14,7 +17,6 @@
     padding: 2em;
     box-shadow: var(--bs);
 
-
 }
 .card__img{
     width: 100%;
@@ -23,27 +25,37 @@
 }
 .card__size{
     background: linear-gradient(90deg, rgba(242, 248, 210, 0.80) -28.38%, rgba(255, 206, 250, 0.80) 156.43%);
-    padding: .5em .8em;
+    padding: 0.1em .8em;
     box-shadow: var(--bs);
     border-radius: 50px;
     margin-left: .7em;
 }
-.text-wrapper{
+.card__size-wrapper{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+   
+}
+.card__price-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
 .card__heart-icon{
-    /* position: absolute; */
-    /* top: 71.5%;
-    right: 10%; */
+   
     font-size: 1.8rem;
     color:  rgb(233, 117, 221);
-    justify-self: self-end;
-       
-
-
-
+}
+.card__heart-icon:hover{
+   
+    text-shadow: var(--bs);
 }
 
 .card h2{
     width: auto;
+}
+.card h2,h3,p{
+    margin: 1em 0;
+    
 }
