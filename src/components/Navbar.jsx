@@ -5,7 +5,7 @@ import { faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-i
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { Link } from 'react-router-dom'
 
-export default function Navbar () {
+export default function Navbar (props) {
 
     return (
         <nav className='navbar'>
@@ -15,7 +15,8 @@ export default function Navbar () {
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='navbar__search-icon' />
             </div>
             <div className='navbar__icons'>
-                
+                <div className='navbar__icon--counter heart-counter'>{props.counterHeart}</div>
+                <div className='navbar__icon--counter cart-counter'>{props.counterCart}</div>
                 <FontAwesomeIcon icon={faHeart} className='navbar__icon-seperator'/> 
                 <FontAwesomeIcon icon={faCartShopping} />
             </div>

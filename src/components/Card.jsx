@@ -3,13 +3,13 @@ import { collectionArray } from '../collectionArray.js'
 import Button from './Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import { useState } from 'react'
 
-export default function Card (){
-    let targetObj = collectionArray.map((items) => items)
+export default function Card (props){
+
     
-    let targetItem = targetObj.map((item) => item)
+
    
-    console.log(targetItem)
 
     return(
         
@@ -20,7 +20,7 @@ export default function Card (){
                     <h2>{item.name}</h2>
                     <div className='card__size-wrapper'>
                         <p>Available in: <span className='card__size'>{item.size}</span> </p> 
-                        <FontAwesomeIcon icon={faHeart} className='card__heart-icon'/>
+                        <FontAwesomeIcon onClick={props.clickHeart} icon={faHeart} className='card__heart-icon'/>
                     </div>
                     <div className='card__price-wrapper'>
                         <p>Price: </p>
@@ -28,7 +28,7 @@ export default function Card (){
                     </div>
                     
 
-                    <Button btnType="primary-btn" text="Add to cart"/>
+                    <Button btnClick={props.clickCart} btnType="primary-btn" text="Add to cart"/>
                     
 
                     

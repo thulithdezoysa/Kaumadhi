@@ -1,35 +1,35 @@
 export const collectionArray = [
     {
-        name: "Brimdesmade Lana Dress",
-        size: ["S ", "M"],
+        name: "Sleeveless Beeralu Maxi Dress",
+        size: ["S ", " M" , " L"],
         id: 0,
-        price: 5000,
-        img: "./src/assets/profile-pic.jfif"
+        price: 4500,
+        img: "./src/assets/card-1.jfif"
     },
     {
-        name: "Brimdesmade Lana Dress",
+        name: "Elizabeth Beeralu Mini Dress",
         size: ["S ", "M"],
         id: 1,
-        price: 5000,
-        img: "./assets/latte-coffee.jpg"
+        price: 4000,
+        img: "./src/assets/card-2.jfif"
     },{
-        name: "Brimdesmade Lana Dress",
-        size: ["S", "M"],
+        name: "Disney Beeralu Mini Dress",
+        size: ["S ", "M " , "L"],
         id: 2,
-        price: 5000,
-        img: "./assets/latte-coffee.jpg"
+        price: 5500,
+        img: "./src/assets/card-3.jfif"
     },{
-        name: "Brimdesmade Lana Dress",
-        size: ["S", "M"],
+        name: "Long Sleeve Beeralu Dress",
+        size: ["S ", "M"],
         id: 3,
         price: 5000,
-        img: "./assets/latte-coffee.jpg"
+        img: "./src/assets/card-4.jfif"
     },{
-        name: "Brimdesmade Lana Dress",
-        size: ["S", "M"],
+        name: "Cutlone Beeralu Dress",
+        size: ["XS ","S ", "M"],
         id: 4,
-        price: 5000,
-        img: "./assets/latte-coffee.jpg"
+        price: 6000,
+        img: "./src/assets/card-5.jfif"
     },
     
 ]
