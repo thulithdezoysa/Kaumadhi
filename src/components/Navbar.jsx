@@ -17,7 +17,7 @@ export default function Navbar (props) {
                 <div className='navbar__icon--counter heart-counter'>{props.counterHeart}</div>
                 <div className='navbar__icon--counter cart-counter'>{props.counterCart}</div>
                 <FontAwesomeIcon icon={faHeart} className='navbar__icon-seperator'/> 
-                <FontAwesomeIcon icon={faCartShopping} />
+                <FontAwesomeIcon icon={faCartShopping}  />
             </div>
             <ul>
                 <li>

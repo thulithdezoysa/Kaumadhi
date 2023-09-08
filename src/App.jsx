@@ -16,7 +16,6 @@ function App() {
 
   function countHeartFn(boo) {
 
-    console.log(boo)
     boo ? setCountHeart(countHeart + 1) :  setCountHeart(countHeart - 1)
     
     
