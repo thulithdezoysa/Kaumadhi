@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import Collections from './pages/Collections'
+import Card from './components/Card'
 import Home from './pages/Home'
 import { useState } from 'react'
 
@@ -13,21 +14,11 @@ function App() {
   const [countHeart, setCountHeart] = useState(0)
   const [countCart, setCountCart] = useState(0)
 
-  
+  function countHeartFn(boo) {
 
-
-
-  // function saveItem (){
-  //     isSave ? "'card__heart-icon'" : "'card__heart-icon'"
-  // }
-
-  function countHeartFn() {
-
-    setCountHeart(countHeart + 1)
+    console.log(boo)
+    boo ? setCountHeart(countHeart + 1) :  setCountHeart(countHeart - 1)
     
-
-
-
     
 }
 function countCartFn() {
