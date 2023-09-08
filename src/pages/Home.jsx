@@ -21,11 +21,11 @@ export default function Home (){
                     <img src="./assets/profile-pic.jfif" className="intro__profile-pic" />
                     <p>Hi, my name is <span className="bold">Kaumadhi</span></p>
                     <p>
-                        I am a fashion designer in NYC. Raised in Flint, Michigan,
-                        I then moved to Chicago where she focused on fine and applied arts.
-                        My passion for style, sewing, and costuming is what she's determined to keep doing.
+                        I am a fashion designer in based in Sri Lanka. I hold a degree in fashion designing from the university of
+                        Northumbria, UK. The concept of my collection explores easthetics of duality through statement piece in 
+                        purely white with luxury handmade beeralu laces.
                     </p>
-                    <Link className="introduction__collection-btn" to='/collections'><Button btnType='primary-btn' text="Check out my Collection" /></Link>
+                    <Link className="introduction__collection-btn" to='/collections'><Button btnType='primary-btn' text="Check out my Collection!" /></Link>
                     
                 </div>
             </section>
