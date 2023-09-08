@@ -11,7 +11,7 @@ export default function Collections (props){
         <div className="collections">
             <img src='./src/assets/Collections-fg.png' alt="collection foreground" className="collections__foreground-img" />
             <img src='./src/assets/collections-bg.png' alt="collection background" className="collections__background-img" />
-            <Card clickCart={props.clickCart} clickHeart={props.clickHeart}/> 
+            <Card clickCart={props.clickCart} clickHeart={props.clickHeart} /> 
         </div>
 
     )

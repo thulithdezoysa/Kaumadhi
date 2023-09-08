@@ -13,9 +13,21 @@ function App() {
   const [countHeart, setCountHeart] = useState(0)
   const [countCart, setCountCart] = useState(0)
 
+  
+
+
+
+  // function saveItem (){
+  //     isSave ? "'card__heart-icon'" : "'card__heart-icon'"
+  // }
+
   function countHeartFn() {
 
     setCountHeart(countHeart + 1)
+    
+
+
+
     
 }
 function countCartFn() {
@@ -28,7 +40,7 @@ function countCartFn() {
     <>
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/collections' element={<Collections clickHeart={countHeartFn} clickCart={countCartFn}/>} /> 
+      <Route path='/collections' element={<Collections clickHeart={countHeartFn} clickCart={countCartFn} />} /> 
       <Route path='/About' element={<App />} /> 
       <Route path='/Contact' element={<App />} />   
     </Routes>

@@ -43,7 +43,6 @@
     gap: 1em;
 }
 .card__heart-icon{
-   
     font-size: 1.8rem;
     color:  rgb(233, 117, 221);
     border-radius: 50%;
@@ -51,8 +50,16 @@
     transition: all 300ms ease-in-out;
     opacity: .7;
     cursor: pointer;
+}
+
+#card__heart-fill{
+    background-color:  rgb(233, 117, 221);
+    color: white;
 
 }
+
+
+
 .card__heart-icon:hover{
    
     opacity: 1;
