@@ -18,7 +18,7 @@ export default function Home (){
                     <p>new designs just in</p>
                 </div>
                 <div className="introduction">
-                    <img src="./src/assets/profile-pic.jfif" className="intro__profile-pic" />
+                    <img src="./assets/profile-pic.jfif" className="intro__profile-pic" />
                     <p>Hi, my name is <span className="bold">Kaumadhi</span></p>
                     <p>
                         I am a fashion designer in NYC. Raised in Flint, Michigan,

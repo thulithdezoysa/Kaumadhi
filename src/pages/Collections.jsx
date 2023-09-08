@@ -9,8 +9,8 @@ export default function Collections (props){
     return(
         
         <div className="collections">
-            <img src='./src/assets/Collections-fg.png' alt="collection foreground" className="collections__foreground-img" />
-            <img src='./src/assets/collections-bg.png' alt="collection background" className="collections__background-img" />
+            <img src='./assets/Collections-fg.png' alt="collection foreground" className="collections__foreground-img" />
+            <img src='./assets/collections-bg.png' alt="collection background" className="collections__background-img" />
             <Card clickCart={props.clickCart} clickHeart={props.clickHeart} /> 
         </div>
 
