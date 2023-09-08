@@ -1,4 +1,3 @@
-import logo from '../assets/logo.png'
 import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons'
@@ -9,7 +8,7 @@ export default function Navbar (props) {
 
     return (
         <nav className='navbar'>
-            <Link to="/"><img src={logo} className='navbar__logo' alt='Kaumadhi logo'/></Link> 
+            <Link to="/"><img src='./assets/logo.png' className='navbar__logo' alt='Kaumadhi logo'/></Link> 
             <div className='navbar__search-bar'>
                 <input type='search' placeholder='Search Collection' />
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='navbar__search-icon' />
