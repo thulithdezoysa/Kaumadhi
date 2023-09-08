@@ -7,8 +7,8 @@ export default function Home (){
     return(
         
         <>
-            <img src=".assets/bg.png" className="background"/>
-            <img src='.assets/hero-img2.png' className='hero-img' />
+            <img src="./assets/bg.png" className="background"/>
+            <img src='./assets/hero-img2.png' className='hero-img' />
             
             <section className="main-section">
 
