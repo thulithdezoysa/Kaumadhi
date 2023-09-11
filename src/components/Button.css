@@ -5,19 +5,35 @@ button{
     font-weight: var(--fw-bold);
     font-family: var(--ff-primary);
     cursor: pointer;
-    box-shadow: var(--bs);
     transition: transform 550ms ease-in-out;
     user-select: none;
 }
 .primary-btn{
+    box-shadow: var(--bs);
     background:  linear-gradient(90deg, rgba(242, 248, 210, 0.80) -28.38%, rgba(255, 206, 250, 0.80) 156.43%);
     border-radius: 50px;
 }
 .secondary-btn{
     border-radius: 5px;
     background-color: rgba(236, 229, 199, 1);
+    transition: box-shadow 350ms ;
+    width: 100%;
+}
+.close-btn{
+    background-color: var(--color-red);
+    color: white;
+    box-shadow: none;
+    padding: .5em 1em; 
+    transition: box-shadow 350ms ;
 }
 
 button:hover{
+
+    box-shadow: var(--bs);
+ 
+
+}
+
+.primary-btn:hover{
     transform: scale(1.05);
 }

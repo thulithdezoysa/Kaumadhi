@@ -6,6 +6,7 @@ import Collections from './pages/Collections'
 import Card from './components/Card'
 import Home from './pages/Home'
 import { useState } from 'react'
+import Modal from './components/Modal'
 
 
 
@@ -18,13 +19,26 @@ function App() {
 
     boo ? setCountHeart(countHeart + 1) :  setCountHeart(countHeart - 1)
     
-    
 }
 function countCartFn() {
 
   setCountCart(countCart + 1)
   
 }
+
+const [cartModal, setCartModal] = useState(false)
+const [saveModal, setSaveModal] = useState(false)
+
+    function showCartModal() {
+    
+        setCartModal((current) => !current )
+        
+    }
+    function showSaveModal() {
+    
+      setSaveModal((current) => !current )
+      
+  }
 
   return (
     <>
@@ -34,7 +48,9 @@ function countCartFn() {
       <Route path='/About' element={<App />} /> 
       <Route path='/Contact' element={<App />} />   
     </Routes>
-    <Navbar counterHeart={countHeart} counterCart={countCart}/>
+    {cartModal && <Modal closeModal={showCartModal} modalTitle="Shopping Cart" />}
+    {saveModal && <Modal closeModal={showSaveModal} modalTitle="Saved List" />}
+    <Navbar counterHeart={countHeart} counterCart={countCart} cartModal={showCartModal} saveModal={showSaveModal}/>
 
     </>
   )

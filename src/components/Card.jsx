@@ -6,10 +6,10 @@ import { useState } from 'react';
 import { collectionArray } from '../collectionArray.jsx'
 
 export default function Card(props) {
-  // Initialize an array to track the saved state for each item
+
   const [isSaved, setIsSaved] = useState(collectionArray.map(() => false));
 
-  // Function to toggle the saved state for a specific item
+
   function toggleSave(index) {
     const updatedIsSaved = [...isSaved]
     updatedIsSaved[index.id] = !updatedIsSaved[index.id]
@@ -29,7 +29,7 @@ export default function Card(props) {
               Available in: <span className="card__size">{item.size}</span>
             </p>
             <FontAwesomeIcon
-              onClick={() => toggleSave(collectionArray.filter((dress) => dress.id == item.id)[0])} // Pass the index of the clicked item
+              onClick={() => toggleSave(collectionArray.filter((dress) => dress.id == item.id)[0])} 
               icon={faHeart}
               data-heart={item.id}
               className={`card__heart-icon`}
