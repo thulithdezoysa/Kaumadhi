@@ -15,41 +15,51 @@ function App() {
   const [countHeart, setCountHeart] = useState(0)
   const [countCart, setCountCart] = useState(0)
 
-  function countHeartFn(boo) {
+  const [cartModal, setCartModal] = useState(false)
+  const [saveModal, setSaveModal] = useState(false)
 
-    boo ? setCountHeart(countHeart + 1) :  setCountHeart(countHeart - 1)
-    
-}
-function countCartFn() {
+  const [saveModalData, setSaveModalData] = useState()
 
-  setCountCart(countCart + 1)
-  
-}
 
-const [cartModal, setCartModal] = useState(false)
-const [saveModal, setSaveModal] = useState(false)
+    function saveDataForModal(item, boo){
+       setSaveModalData(item.name)
+    }
 
-    function showCartModal() {
-    
-        setCartModal((current) => !current )
+    function countHeartFn(boo) {
+
+        boo ? setCountHeart(countHeart + 1) :  setCountHeart(countHeart - 1)
         
     }
-    function showSaveModal() {
-    
-      setSaveModal((current) => !current )
+    function countCartFn() {
+
+      setCountCart(countCart + 1)
       
-  }
+    }
+
+
+    function showCartModal() {
+        
+            setCartModal((current) => !current )
+            
+    }
+        function showSaveModal() {
+        
+          setSaveModal((current) => !current )
+        
+    }
 
   return (
     <>
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/collections' element={<Collections clickHeart={countHeartFn} clickCart={countCartFn} />} /> 
+      <Route path='/collections' element={<Collections clickHeart={countHeartFn} 
+                                                       clickCart={countCartFn} 
+                                                       saveModalData={saveDataForModal} />} /> 
       <Route path='/About' element={<App />} /> 
       <Route path='/Contact' element={<App />} />   
     </Routes>
     {cartModal && <Modal closeModal={showCartModal} modalTitle="Shopping Cart" />}
-    {saveModal && <Modal closeModal={showSaveModal} modalTitle="Saved List" />}
+    {saveModal && <Modal closeModal={showSaveModal} modalTitle="Saved List" modalData={saveModalData}/>}
     <Navbar counterHeart={countHeart} counterCart={countCart} cartModal={showCartModal} saveModal={showSaveModal}/>
 
     </>
