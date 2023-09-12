@@ -8,6 +8,7 @@ export default function Home (){
         
         <>
             <img src="./assets/bg.png" className="background"/>
+            {/* <div className="background"></div> Tried to make it responsive */}
             <img src='./assets/hero-img2.png' className='hero-img' />
             
             <section className="main-section">

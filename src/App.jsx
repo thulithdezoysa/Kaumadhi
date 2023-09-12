@@ -49,7 +49,7 @@ const [saveModal, setSaveModal] = useState(false)
       <Route path='/Contact' element={<App />} />   
     </Routes>
     {cartModal && <Modal closeModal={showCartModal} modalTitle="Shopping Cart" />}
-    {saveModal && <Modal closeModal={showSaveModal} modalTitle="Saved List" />}
+    {saveModal && <Modal closeModal={showSaveModal} modalTitle="Saved List" displayBtn="none" />}
     <Navbar counterHeart={countHeart} counterCart={countCart} cartModal={showCartModal} saveModal={showSaveModal}/>
 
     </>

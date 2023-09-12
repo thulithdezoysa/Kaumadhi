@@ -3,6 +3,8 @@ import { collectionArray } from '../collectionArray.jsx'
 import Button from './Button'
 
 export default function Modal (props){
+
+    
     return(
         
         <>    
@@ -18,7 +20,7 @@ export default function Modal (props){
                     <h1>{props.modalTitle}</h1>
                     <hr />
                     <p>No items in your cart. {props.modalContext}</p>
-                    <Button btnType='secondary-btn' text='Order Items'/>
+                    <Button displayBtn={props.displayBtn} btnType='secondary-btn' text='Order Items'/>
                 </div>
 
             </div>
