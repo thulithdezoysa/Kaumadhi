@@ -14,8 +14,8 @@ export default function Card(props) {
     const updatedIsSaved = [...isSaved]
     updatedIsSaved[index.id] = !updatedIsSaved[index.id]
     props.clickHeart(updatedIsSaved[index.id])  
+    props.saveModalData(index, updatedIsSaved[index.id])
     setIsSaved(updatedIsSaved)
-
   }
 
   return (
@@ -50,7 +50,7 @@ export default function Card(props) {
         </div>
       ))}
     </div>
-  );
+  )
 }
 
 

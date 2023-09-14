@@ -1,14 +1,11 @@
 
 
 .background{
-   
     position: absolute;
     bottom: 0;
     width: 100vw;
     z-index: -1;
     height: 100vh;
-    top: 30%;
-   
 }
 
 .hero-img{
