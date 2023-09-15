@@ -1,7 +1,10 @@
 
 
 .background{
-    position: absolute;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     bottom: 0;
     width: 100vw;
     z-index: -1;
@@ -18,13 +21,15 @@
 .main-section{
     display: flex;
     justify-content: space-around;
-    margin-top: 4em;
+    gap: 5em;
+    /* margin-top: 4em; */
+    padding: 4em;
 }
 
 @media (max-width: 800px){
     .main-section{
         flex-direction: column;
-        gap:10em
+        
        
     }
 }
@@ -38,7 +43,7 @@
     object-fit: cover;
 }
 .introduction{
-    width: 800px;
+    max-width: 800px;
     text-align: justify;
     display: flex;
     flex-direction: column;
@@ -47,6 +52,7 @@
 .introduction__collection-btn{
     margin-left: auto;
     margin-top: 2.5em;
+    white-space: nowrap;
     
 }
 
