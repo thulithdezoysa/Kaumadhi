@@ -1,6 +1,5 @@
 import Card from "../components/Card";
 import './Collections.css'
-import { useState } from 'react'
 
 
 export default function Collections (props){

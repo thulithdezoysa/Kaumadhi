@@ -16,8 +16,7 @@
     
     --color-white: #fff;
     --color-black: #000;
-    --color-accent:  #2f48a2; 
-    --color-accent2: #40B7E6;
+ 
     --color-red: #e00909;
 
 
@@ -46,7 +45,6 @@
 
 /* General styles */
 
-/* endable this to add smooth scrolling */
 html {
     scroll-behavior: smooth;
 }

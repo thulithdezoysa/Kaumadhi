@@ -1,0 +1,26 @@
+.about{
+    color: var(--color-dark);
+    padding: 12em;
+}
+.about > p{
+    text-align: justify;
+    line-height: 2;
+    margin-bottom: 2.5em;
+}
+.about > p:last-child{
+    margin-bottom: 0;
+}
+
+@media (max-width: 1200px){
+    .about{
+        padding: 12em 8em;
+    }
+
+}
+
+@media (max-width: 800px){
+    .about{
+        padding: 12em 4em;
+    }
+
+}

@@ -7,6 +7,7 @@ import Card from './components/Card'
 import Home from './pages/Home'
 import { useState } from 'react'
 import Modal from './components/Modal'
+import AboutUs from './pages/AboutUs'
 
 
 
@@ -55,8 +56,8 @@ function App() {
       <Route path='/collections' element={<Collections clickHeart={countHeartFn} 
                                                        clickCart={countCartFn} 
                                                        saveModalData={saveDataForModal} />} /> 
-      <Route path='/About' element={<App />} /> 
-      <Route path='/Contact' element={<App />} />   
+      <Route path='/About' element={<AboutUs />} /> 
+         
     </Routes>
     {cartModal && <Modal closeModal={showCartModal} modalTitle="Shopping Cart" />}
     {saveModal && <Modal closeModal={showSaveModal} modalTitle="Saved List" />}
