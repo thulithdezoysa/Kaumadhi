@@ -3,6 +3,9 @@ import { collectionArray } from '../collectionArray.jsx'
 import Button from './Button'
 
 export default function Modal (props){
+    const saveInfo = props.modalContext
+
+    
     return(
         
         <>    
@@ -17,7 +20,17 @@ export default function Modal (props){
                     text='Back'/>
                     <h1>{props.modalTitle}</h1>
                     <hr />
-                    <p>No items in your cart. {props.modalContext}</p>
+                    <div className='modal__content--items-container'>
+
+                        <img src={saveInfo.img} alt='Item image' className='modal__content--item-img'/>
+                        <div className='modal__content--item-desc'>
+
+                            <h3>{saveInfo.name}</h3>
+                            <p>Available Sizes: {saveInfo.size}</p>
+                            <p>Price: <span className='bold'>LKR {saveInfo.price}</span> </p>
+                        </div>
+
+                    </div>
                     <Button btnType='secondary-btn' text='Order Items'/>
                 </div>
 

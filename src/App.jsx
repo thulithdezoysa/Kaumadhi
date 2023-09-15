@@ -19,11 +19,12 @@ function App() {
   const [cartModal, setCartModal] = useState(false)
   const [saveModal, setSaveModal] = useState(false)
 
-  const [saveModalData, setSaveModalData] = useState()
+  const [saveModalData, setSaveModalData] = useState('No items in the list.')
 
+console.log(saveModalData)
 
     function saveDataForModal(item, boo){
-       setSaveModalData(item.name)
+       setSaveModalData(item)
     }
 
     function countHeartFn(boo) {
@@ -38,12 +39,12 @@ function App() {
     }
 
 
-    function showCartModal() {
+    function toggleCartModal() {
         
             setCartModal((current) => !current )
             
     }
-        function showSaveModal() {
+        function toggleSaveModal() {
         
           setSaveModal((current) => !current )
         
@@ -59,9 +60,9 @@ function App() {
       <Route path='/About' element={<AboutUs />} /> 
          
     </Routes>
-    {cartModal && <Modal closeModal={showCartModal} modalTitle="Shopping Cart" />}
-    {saveModal && <Modal closeModal={showSaveModal} modalTitle="Saved List" />}
-    <Navbar counterHeart={countHeart} counterCart={countCart} cartModal={showCartModal} saveModal={showSaveModal}/>
+    {cartModal && <Modal closeModal={toggleCartModal} modalTitle="Shopping Cart" />}
+    {saveModal && <Modal closeModal={toggleSaveModal} modalTitle="Saved List" modalContext={saveModalData} />}
+    <Navbar counterHeart={countHeart} counterCart={countCart} cartModal={toggleCartModal} saveModal={toggleSaveModal}/>
 
     </>
   )
