@@ -99,7 +99,11 @@ input::placeholder{
 
 /* Navigation Links */
 
-ul{
+.navbar__closeBtn{
+    display: none;
+}
+
+.navbar__navlinks{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -139,14 +143,42 @@ a{
         max-width: 150px;
         max-height: 150px;
     }
-    ul{
-        display: none;
+    .navbar__navlinks{
+        /* display: none; */
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        background: linear-gradient(90deg, rgb(225, 241, 131) -28.38%, rgb(255, 128, 242) 156.43%);;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        top: 0px;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        right: 0;
+        
+    }
+    .navbar__closeBtn{
+        display: block;
+        align-self: self-end;
+        margin-right: 3em;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    .navbar__navlinks > li{
+        width: 100vw;
+        text-align: center;
+        padding: 3em;
     }
     .navbar__menu-icon{
         display: inherit;
         justify-self: flex-end;
         margin-left: 3em;
         cursor: pointer;
+    }
+    .navbar__search-bar{
+        display: inherit;
     }
     
 }
@@ -161,6 +193,6 @@ a{
         max-height: 120px;
     }
     .navbar__search-bar{
-        display: none;
+        /* display: none; */
     }
 }

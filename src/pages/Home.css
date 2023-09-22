@@ -2,13 +2,15 @@
 
 .background{
     position: fixed;
-    top: 0;
+
     right: 0;
     left: 0;
     bottom: 0;
     width: 100vw;
     z-index: -1;
     height: 100vh;
+   
+    min-height: 1000px;
 }
 
 .hero-img{
@@ -53,6 +55,7 @@
     margin-left: auto;
     margin-top: 2.5em;
     white-space: nowrap;
+    color: #000;
     
 }
 
@@ -69,4 +72,12 @@
 }
 #look-better{
     margin-left: 2.5em;
+}
+
+@media (max-width: 600px){
+    .hero-text h1{
+        font-size: 2.5rem;
+        
+       
+    }
 }
