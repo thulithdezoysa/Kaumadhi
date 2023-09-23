@@ -11,10 +11,10 @@ export default function Navbar (props) {
 
     const [menuToggle, setMenuToggle] = useState(false)
 
+   
+  
         function toggleMenuitems(){
-            setMenuToggle(() => !menuToggle)
-            menuToggle ? 'inherit' : 'none'
-            alert('clicked')
+            setMenuToggle((current) => !current)
 
         }
 
@@ -38,8 +38,12 @@ export default function Navbar (props) {
             </div>
             <FontAwesomeIcon icon={faBars} className='navbar__menu-icon' onClick={toggleMenuitems} />
 
-            <ul className='navbar__navlinks' style={{display:menuToggle}}>
-            <FontAwesomeIcon icon={faXmark} className='navbar__closeBtn' onClick={toggleMenuitems} />
+            <ul className={menuToggle ? 'navbar__navlinks navbar__navlinks-show' : 'navbar__navlinks navbar__navlinks-hide'} >
+                <FontAwesomeIcon icon={faXmark} className='navbar__closeBtn' onClick={toggleMenuitems} />
+                <div className='navbar__search-bar navbar__responsive-search-bar'>
+                    <input type='search' placeholder='Search Collection' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='navbar__search-icon' onClick={searchItems} />
+                </div>
                 <li>
                     <Link to="/">Home</Link>
                 </li>
