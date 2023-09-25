@@ -1,8 +1,11 @@
 import './Modal.css'
 import { collectionArray } from '../collectionArray.jsx'
 import Button from './Button'
+import { useState } from 'react'
 
 export default function Modal (props){
+    const [saveItems, setSaveItems] = useState()
+
     const saveInfo = props.modalContext
 
     

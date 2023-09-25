@@ -46,8 +46,7 @@ console.log(saveModalData)
     }
         function toggleSaveModal() {
         
-          setSaveModal((current) => !current )
-        
+          setSaveModal((current) => !current )  
     }
 
   return (
