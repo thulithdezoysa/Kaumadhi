@@ -5,6 +5,13 @@
     position: relative;
 }
 
+@media (max-width: 800px) {
+    .collections{
+        padding: 12em 1em ;
+    }
+    
+}
+
 .collections__background-img{
     position: fixed;
     top: 0;

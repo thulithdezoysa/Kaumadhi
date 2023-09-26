@@ -12,10 +12,12 @@ export default function Navbar (props) {
     const [menuToggle, setMenuToggle] = useState(false)
 
    
-  
-        function toggleMenuitems(){
-            setMenuToggle((current) => !current)
+        function closeMenuItems(){
+            setMenuToggle(() => false)
+        }
 
+        function toggleMenuItems(){
+            setMenuToggle((current) => !current)
         }
 
         function searchItems(){
@@ -36,22 +38,22 @@ export default function Navbar (props) {
                 <FontAwesomeIcon icon={faHeart} className='navbar__icon-seperator' onClick={props.saveModal}/> 
                 <FontAwesomeIcon icon={faCartShopping}  onClick={props.cartModal} className='navbar__cart-icon'/>
             </div>
-            <FontAwesomeIcon icon={faBars} className='navbar__menu-icon' onClick={toggleMenuitems} />
+            <FontAwesomeIcon icon={faBars} className='navbar__menu-icon' onClick={toggleMenuItems} />
 
             <ul className={menuToggle ? 'navbar__navlinks navbar__navlinks-show' : 'navbar__navlinks navbar__navlinks-hide'} >
-                <FontAwesomeIcon icon={faXmark} className='navbar__closeBtn' onClick={toggleMenuitems} />
+                <FontAwesomeIcon icon={faXmark} className='navbar__closeBtn' onClick={closeMenuItems} />
                 <div className='navbar__search-bar navbar__responsive-search-bar'>
                     <input type='search' placeholder='Search Collection' />
                     <FontAwesomeIcon icon={faMagnifyingGlass} className='navbar__search-icon' onClick={searchItems} />
                 </div>
-                <li>
-                    <Link to="/">Home</Link>
+                <li onClick={closeMenuItems}>
+                    <Link to="/" >Home</Link>
                 </li>
-                <li>
-                    <Link to="/collections">Collections</Link>
+                <li onClick={closeMenuItems}>
+                    <Link to="/collections" >Collections</Link>
                 </li>
-                <li>
-                    <Link to="/about">About us</Link>
+                <li onClick={closeMenuItems}>
+                    <Link to="/about" >About us</Link>
                 </li>
                 
             </ul>

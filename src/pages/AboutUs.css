@@ -2,6 +2,7 @@
     color: var(--color-dark);
     padding: 12em;
 }
+
 .about > p{
     text-align: justify;
     line-height: 2;
@@ -20,7 +21,7 @@
 
 @media (max-width: 800px){
     .about{
-        padding: 12em 4em;
+        padding: 12em 2em;
     }
 
 }
