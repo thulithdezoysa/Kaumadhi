@@ -23,7 +23,7 @@ export default function AboutUs (){
 
             <p>Kaumadhi holds a degree in Fashion Design 
                 from the University of Northumbria U.K in affiliation with the Academy of Design(AOD) in Colombo and has launched
-                her first collection "The Little Woman" at the Mercedes Benz fashion week 2022 held in Colombo.</p>  
+                her first collection &ldquo;The Little Woman&rdquo; at the Mercedes Benz fashion week 2022 held in Colombo.</p>
 
             <h1>Our Journey</h1>
             <p>The concept of her collections explores aesthetics of duelity through statement piece in purely white with luxury
@@ -34,7 +34,7 @@ export default function AboutUs (){
             <p>Since we have grown into a bigger scale production line, we are now donating our fabric cut wastage to house 
                 wives that work from home to wave carpets. We are also introducing a free tote bag made with our fabric off cuts to any purchase.
             </p>  
-            <p>Our garments represent strong and confident women out there, we wanted you to have the power in deciding it's personality.
+            <p>Our garments represent strong and confident women out there, we wanted you to have the power in deciding it&apos;s personality.
             Get in touch with us as <span className='bold'>KAUMADHI</span> embarks on this colourful and inspiring adventure....</p>                       
             
         </div>
