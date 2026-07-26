@@ -34,7 +34,17 @@
   gap: 1.5em;
   align-items: start;
   margin: 1.5em;
-}  
+}
+
+.modal__content--list{
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.modal__content--list .modal__content--items-container{
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1em;
+}
 
 .modal__content--item-img{
   max-width: 100px;

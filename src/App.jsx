@@ -3,7 +3,6 @@ import './App.css'
 import Navbar from './components/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import Collections from './pages/Collections'
-import Card from './components/Card'
 import Home from './pages/Home'
 import { useState } from 'react'
 import Modal from './components/Modal'
@@ -14,28 +13,37 @@ import AboutUs from './pages/AboutUs'
 function App() {
 
   const [countHeart, setCountHeart] = useState(0)
-  const [countCart, setCountCart] = useState(0)
+  const [cartItems, setCartItems] = useState([])
+  const [searchTerm, setSearchTerm] = useState('')
 
   const [cartModal, setCartModal] = useState(false)
   const [saveModal, setSaveModal] = useState(false)
 
   const [saveModalData, setSaveModalData] = useState('No items in the list.')
 
-console.log(saveModalData)
-
-    function saveDataForModal(item, boo){
+    function saveDataForModal(item){
        setSaveModalData(item)
     }
 
     function countHeartFn(boo) {
 
         boo ? setCountHeart(countHeart + 1) :  setCountHeart(countHeart - 1)
-        
-    }
-    function countCartFn() {
 
-      setCountCart(countCart + 1)
-      
+    }
+    function addToCart(item) {
+
+      setCartItems((current) => {
+        const existingItem = current.find((cartItem) => cartItem.id === item.id)
+
+        if (existingItem) {
+          return current.map((cartItem) =>
+            cartItem.id === item.id ? { ...cartItem, qty: cartItem.qty + 1 } : cartItem
+          )
+        }
+
+        return [...current, { ...item, qty: 1 }]
+      })
+
     }
 
 
@@ -45,23 +53,26 @@ console.log(saveModalData)
             
     }
         function toggleSaveModal() {
-        
-          setSaveModal((current) => !current )  
+
+          setSaveModal((current) => !current )
     }
+
+  const cartCount = cartItems.reduce((total, item) => total + item.qty, 0)
 
   return (
     <>
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/collections' element={<Collections clickHeart={countHeartFn} 
-                                                       clickCart={countCartFn} 
-                                                       saveModalData={saveDataForModal} />} /> 
-      <Route path='/About' element={<AboutUs />} /> 
-         
+      <Route path='/collections' element={<Collections clickHeart={countHeartFn}
+                                                       clickCart={addToCart}
+                                                       saveModalData={saveDataForModal}
+                                                       searchTerm={searchTerm} />} />
+      <Route path='/About' element={<AboutUs />} />
+
     </Routes>
-    {cartModal && <Modal closeModal={toggleCartModal} modalTitle="Shopping Cart" />}
+    {cartModal && <Modal closeModal={toggleCartModal} modalTitle="Shopping Cart" modalContext={cartItems} />}
     {saveModal && <Modal closeModal={toggleSaveModal} modalTitle="Saved List" modalContext={saveModalData} />}
-    <Navbar counterHeart={countHeart} counterCart={countCart} cartModal={toggleCartModal} saveModal={toggleSaveModal}/>
+    <Navbar counterHeart={countHeart} counterCart={cartCount} cartModal={toggleCartModal} saveModal={toggleSaveModal} searchTerm={searchTerm} onSearchChange={setSearchTerm}/>
 
     </>
   )
